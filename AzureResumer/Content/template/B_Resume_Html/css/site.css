@@ -1,0 +1,140 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.cntl-content {
+    opacity: 0;
+}
+
+.cntl-bar-fill, .cntl-content, .cntl-image {
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.cntl-animate .cntl-content {
+    opacity: 1;
+}
+
+.cntl-animate .cntl-image {
+    opacity: 1;
+}
+
+body {
+    font-family: '微軟正黑體';
+}
+
+.circle {
+    margin-top: 50px;
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+}
+
+.skill {
+    margin-top: -40px;
+    margin-bottom: 100px;
+    font-size: 20px;
+    color: white;
+}
+
+.circleText {
+    top: -100px;
+    position: relative;
+    font-size: 30px;
+    color: white;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.title {
+    position: relative;
+    top: -230px;
+    text-align: center;
+    /*color: white;*/
+    font-size: 30px;
+}
+
+.subTitle {
+    position: relative;
+    top: -230px;
+    text-align: center;
+    /*color: white;*/
+    font-size: 14px;
+}
+
+.name {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.department {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.exp1 {
+    position: relative;
+    top: -330px;
+    right: 40px;
+    text-align: right;
+    color: white;
+    font-size: 22px;
+}
+
+.exp2 {
+    position: relative;
+    top: -275px;
+    left: 30px;
+    text-align: left;
+    color: white;
+    font-size: 22px;
+}
+
+.exp3 {
+    position: relative;
+    top: -218px;
+    right: 30px;
+    text-align: right;
+    color: white;
+    font-size: 22px;
+}
+
+.box {
+    padding: 25px 0;
+}
+
+.light {
+    font-family: "Microsoft JhengHei Light";
+}

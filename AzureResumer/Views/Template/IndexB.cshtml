@@ -1,0 +1,229 @@
+﻿@model AzureResumer.Models.Resume
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@Model.Name Resume</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./site.css" />
+    <script src="./site.js"></script>
+
+</head>
+<body>
+    <div class="container-fluid cntl cntl-states" style="width: 800px; padding: 0">
+        <!--首圖區塊-->
+        <div id="state0" class="row cntl-state" style="height: 380px;">
+            <div class="cntl-content">
+                <div class="col-xs-12" style="padding: 0;">
+                    <img src="./@Model.Photos[1]" alt="" class="img-responsive center-block"><!--補資料-->
+                </div>
+                <div class="title" style="color: #000">Hi, I'M @Model.Name</div>
+                <div class="subTitle" style="color: #000">@Model.Depart</div>
+            </div>
+        </div>
+        <!--大頭照區塊-->
+        <div id="state1" class="row cntl-state">
+            <div class="cntl-content">
+                <div class="col-xs-12" style="background-color: #D42C2E; padding-top: 50px; padding-bottom: 40px;">
+                    <img src="./@Model.Photos[0]" alt="" class="img-responsive center-block" style="border-radius: 50%" />
+                    <div class="name">@Model.Name</div>
+                    <div class="department">@Model.School</div>
+                    <div class="department">/</div>
+                    <div class="department">@Model.Depart</div>
+                </div>
+            </div>
+        </div>
+        <!--關於區塊-->
+        <div id="state2" class="row cntl-state">
+            <div class="cntl-content">
+                <div class="col-xs-12">
+                    <h3 style="color: #D42C2E; text-align: center;">ABOUT ME</h3>
+                    <div class="row" style="margin-top: 10px; margin-bottom: 5px;">
+                        <div class="col-xs-12">@Model.Bio</div>
+                    </div>
+                    <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+                        <div class="col-xs-6">@Model.Advantage</div>
+                        <div class="col-xs-6">@Model.Hobit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--專長區塊-->
+        <div id="state3" class="row cntl-state">
+            <div class="cntl-content">
+                <div class="col-xs-12" style="background-color: #D42C2E; height: 350px">
+                    <h3 style="color: white; text-align: center;">MY SKIILLS</h3>
+                    <div class="row light" style="margin-top: 50px;">
+                        <div class="col-xs-3 ">
+                            <div class="skill1 text-center">
+                                <div class="text-center circleText"></div>
+                                <div class="skill">@Model.Skill1</div><!--補資料-->
+                            </div>
+                        </div>
+                        <div class="col-xs-3 ">
+                            <div class="skill2 text-center">
+                                <div class="text-center circleText"></div>
+                                <div class="skill">@Model.Skill2</div><!--補資料-->
+                            </div>
+                        </div>
+                        <div class="col-xs-3 ">
+                            <div class="skill3 text-center">
+                                <div class="text-center circleText"></div>
+                                <div class="skill">@Model.Skill3</div><!--補資料-->
+                            </div>
+                        </div>
+                        <div class="col-xs-3 ">
+                            <div class="skill4 text-center">
+                                <div class="text-center circleText"></div>
+                                <div class="skill">@Model.Skill4</div><!--補資料-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--經歷區塊-->
+        <div id="state4" class="row cntl-state">
+            <div class="cntl-content">
+                <div class="col-xs-12">
+                    <h3 style="color: #D42C2E; text-align: center;">EXPERIENCES</h3>
+                </div>
+                <div class="row" style="height: 450px">
+                    <div class="col-xs-12" style="padding: 0">
+                        <img src="./exp.png" width="800" alt="" />
+                    </div>
+                    <div class="exp1">@Model.ExpName1<br /><span style="font-size: 20px">@Model.ExpContent1</span></div>
+                    <div class="exp2">@Model.ExpName2<br /><span style="font-size: 20px">@Model.ExpContent2</span></div>
+                    <div class="exp3">@Model.ExpName3<br /><span style="font-size: 20px">@Model.ExpContent3</span></div>
+                </div>
+            </div>
+        </div>
+        <!--作品區塊-->
+        <div id="state5" class="row cntl-state">
+            <div class="cntl-content">
+                <div class="col-xs-12" style="background-color: #D42C2E; padding: 0;">
+                    <h3 style="color: white; text-align: center;">PORTFOLIO</h3>
+                    <div class="row" style="text-align: center;">
+                        <div class="col-xs-4" style="margin: 0; padding: 0;">
+                            <div class="box" style="text-align: right">
+                                <a href="@Model.PortfolioLink1">
+                                    <img src="./@Model.Photos[2]" alt="@Model.PortfolioName1" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="box">
+                                <a href="@Model.PortfolioLink2">
+                                    <img src="./@Model.Photos[3]" alt="@Model.PortfolioName2" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4" style="margin: 0; padding: 0;">
+                            <div class="box" style="text-align: left">
+                                <a href="@Model.PortfolioLink3">
+                                    <img src="./@Model.Photos[4]" alt="@Model.PortfolioName3" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4" style="margin: 0; padding: 0;">
+                            <div class="box" style="text-align: right; padding-top: 10px;">
+                                <a href="@Model.PortfolioLink4">
+                                    <img src="./@Model.Photos[5]" alt="@Model.PortfolioName4" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="box" style="padding-top: 10px;">
+                                <a href="@Model.PortfolioLink5">
+                                    <img src="./@Model.Photos[6]" alt="@Model.PortfolioName5" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-4" style="margin: 0; padding: 0; margin-bottom: 30px;">
+                            <div class="box" style="text-align: left; padding-top: 10px;">
+                                <a href="@Model.PortfolioLink6">
+                                    <img src="./@Model.Photos[7]" alt="@Model.PortfolioName6" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--聯絡區塊-->
+        <div class="row light">
+            <div class="col-xs-12" style="background-color: #373B3F">
+                <h3 style="color: white; text-align: center; font-weight: normal;">Get Connect</h3>
+                <div style="margin: 30px; text-align: center;">
+                    <span style="color: white;">
+                        @Model.Depart &nbsp;&nbsp;&nbsp;phone：
+                        @Model.Phone &nbsp;&nbsp;&nbsp;e-mail：
+                        @Model.Email
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function skill() {
+            $('.skill1').circleProgress({
+                value: parseFloat(@Model.SkillValue1) / 100, //補資料
+                size: 150.0,
+                startAngle: -Math.PI / 2,
+                thickness: 8,
+                emptyFill: 'rgba(0,0,0,0)',
+                fill: { gradient: ['#FFF', '#FFF'] },
+            }).on('circle-animation-progress', function(event, progress) {
+                $(this).find('.circleText').html(parseInt(@Model.SkillValue1 * progress) + '<span style="font-size: 20px;">%</span>');
+            });
+            $('.skill2').circleProgress({
+                value: parseFloat(@Model.SkillValue2) / 100, //補資料
+                size: 150.0,
+                startAngle: -Math.PI / 2,
+                thickness: 8,
+                emptyFill: 'rgba(0,0,0,0)',
+                fill: { gradient: ['#FFF', '#FFF'] },
+            }).on('circle-animation-progress', function(event, progress) {
+                $(this).find('.circleText').html(parseInt(@Model.SkillValue2 * progress) + '<span style="font-size: 20px;">%</span>');
+            });
+            $('.skill3').circleProgress({
+                value: parseFloat(@Model.SkillValue3) / 100, //補資料
+                size: 150.0,
+                startAngle: -Math.PI / 2,
+                thickness: 8,
+                emptyFill: 'rgba(0,0,0,0)',
+                fill: { gradient: ['#FFF', '#FFF'] },
+            }).on('circle-animation-progress', function(event, progress) {
+                $(this).find('.circleText').html(parseInt(@Model.SkillValue3 * progress) + '<span style="font-size: 20px;">%</span>');
+            });
+            $('.skill4').circleProgress({
+                value: parseFloat(@Model.SkillValue4) / 100, //補資料
+                size: 150.0,
+                startAngle: -Math.PI / 2,
+                thickness: 8,
+                emptyFill: 'rgba(0,0,0,0)',
+                fill: { gradient: ['#FFF', '#FFF'] },
+            }).on('circle-animation-progress', function(event, progress) {
+                $(this).find('.circleText').html(parseInt(@Model.SkillValue4 * progress) + '<span style="font-size: 20px;">%</span>');
+            });
+        }
+    $(document).ready(function (e) {
+        $('.cntl').cntl({
+            revealbefore: 300,
+            anim_class: 'cntl-animate',
+            onreveal: function (e) {
+                console.log(e);
+            }
+        });
+    });
+    </script>
+
+
+</body>
+
+</html>

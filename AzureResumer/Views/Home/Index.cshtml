@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "首頁";
+}
+@Styles.Render("~/Content/index.css")
+<div class="jumbotron">
+    <h1>Azure Resumer</h1>
+    <p class="lead">透過我們的服務，可以讓您快速部署履歷到Azure Web App中！我們同時也提供多種精美樣板，可以自由選擇喜愛的版型創造出屬於自己的履歷！</p>
+</div>
+
+<div class="row intro">
+    <div class="col-md-6 azure">
+        <h2>何謂Azure？</h2>
+        <p>Microsoft Azure 是微軟的公用雲端服務 (Public Cloud Service) 平台，是微軟線上服務 (Microsoft Online Services) 的一部份，自 2008 年開始發展，2010年2月份正式推出，目前全球有22座資料中心以及32個CDN跳躍點 (POP)，並且於2015年時被 Gartner 列為雲端運算的領先者。目前 Microsoft Azure 已包含 30 餘種服務，數百項功能，並且為微軟帶來了12億美元的獲利(2015年度)。</p>
+        <p>
+            <a href="https://azure.microsoft.com/zh-tw/" target="_blank" class="btn btn-default btn-lg">申請使用 &raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-6 dreamspark">
+        <h2>何謂DreamSpark？</h2>
+        <p>DreamSpark 是一項支援技術教育的 Microsoft 方案，藉由提供 Microsoft 軟體的存取權利， 以供學習、授課與研究之用。而它的概念十分單純：其主要目的是免費為學生提供 Microsoft 專業級開發與設計工具， 讓他們能夠追求自己的夢想，開創新世代的重大技術突破，或者只是藉此踏出職場生涯的第一步。</p>
+        <p>
+            <a href="https://www.dreamspark.com/Product/Product.aspx?productid=99" target="_blank" class="btn btn-default btn-lg">開通權限 &raquo;</a>
+        </p>
+    </div>
+</div>
+
+<div class="row template">
+    <div class="col-md-12">
+        <h1>Let's Start!</h1>
+    </div>
+    <div class="col-md-4">
+        <img src="~/Content/img/A.jpg" alt="" class="img-responsive text-center img-rounded" />
+        <h3>泰瑞的履歷</h3>
+        <p>
+            <a href="~/Content/template/A_Resume_Html/index.html" target="_blank" class="btn btn-default btn-lg">預覽 &raquo;</a>
+            @Html.ActionLink("準備中", "Index", "Craft", new { type = 1 }, new { @class = "btn btn-info btn-lg", @disabled = "disabled" })
+        </p>
+    </div>
+    <div class="col-md-4">
+        <img src="~/Content/img/B.jpg" alt="" class="img-responsive text-center img-rounded" />
+        <h3>荷馬的履歷</h3>
+        <p>
+            <a href="~/Content/template/B_Resume_Html/index.html" target="_blank" class="btn btn-default btn-lg">預覽 &raquo;</a>
+            @Html.ActionLink("開始編輯", "Index", "Craft", new { type = 2 }, new { @class = "btn btn-info btn-lg" })
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h3>提供您的履歷樣板</h3>
+        <p><a href="https://onedrive.live.com/redir?page=survey&resid=3D6866965AB6079C!12595&authkey=!ABfPG33XUzAEPM4&ithint=file%2cxlsx" target="_blank" class="btn btn-danger btn-lg">聯絡我 &raquo;</a>
+    </div>
+</div>
+
+<div class="row cv">
+    <div class="col-md-12" style="padding-bottom: 10px;">
+        <h1>About Me</h1>
+    </div>
+    <div class="col-md-4">
+        <img src="~/Content/img/self.jpg" alt="" class="img-responsive img-rounded" style="margin: 0 auto;" />
+    </div>
+    <div class="col-md-8">
+        <h3>
+            <b>張守群 Stan Chang</b>
+        </h3>
+        <h3>第十屆微軟學生大使 - 技術長 (CTO) & Web PM</h3>
+        <h3>專長在於Web與Azure還有一點點的Xamarin</h3>
+        <h1>
+            <script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
+            <a href="https://www.facebook.com/LiJyur" target="_blank"><i class="fa fa-facebook-official" style="color: #808080;" aria-hidden="true"></i></a>
+            &nbsp;<a href="https://www.linkedin.com/in/stan0925" target="_blank"><i class="fa fa-linkedin-square" style="color: #808080;" aria-hidden="true"></i></a>
+            &nbsp;<a href="mailto:SHOU-CHUN.CHANG@studentpartner.com" target="_blank"><i class="fa fa-envelope" style="color: #808080;" aria-hidden="true"></i></a>
+            &nbsp;<a href="" onclick="Skype.tryAnalyzeSkypeUri('chat', '0');Skype.trySkypeUri_Generic('skype:lijyue925?chat', '_detectSkypeClient_1462541401933', '0'); return false;" target="_blank"><i class="fa fa-skype" style="color: #808080;" aria-hidden="true"></i></a>
+        </h1>
+    </div>
+</div>

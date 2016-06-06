@@ -1,0 +1,30 @@
+﻿.jumbotron {
+    background-color: #a8d7f0;
+}
+
+    .jumbotron > h1 {
+        padding-bottom: 15px;
+    }
+
+.intro {
+    padding-bottom: 30px;
+}
+
+.template {
+    padding: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: inherit;
+    background-color: #eeeeee;
+    border-radius: 6px;
+    margin: 0;
+}
+
+.cv {
+    padding: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    margin: 0;
+}

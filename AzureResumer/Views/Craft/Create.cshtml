@@ -1,0 +1,66 @@
+﻿@using Microsoft.Ajax.Utilities
+@model AzureResumer.Models.Resume
+@{
+    ViewBag.Title = "Create";
+}
+@Styles.Render("~/Content/create.css")
+
+<div class="jumbotron">
+    <h2>開始製作屬於自己的履歷吧！</h2>
+    <p class="lead">您必須先在Azure中成功創建自己的Web App，並且設定好「部署認證」，這樣我們才能直接部署履歷唷！</p>
+    <p>
+        <a href="https://portal.azure.com/" target="_blank" class="btn btn-primary btn-lg">Azure入口網站 &raquo;</a>
+        <a href="https://azure.microsoft.com/zh-tw/documentation/services/app-service/web/" target="_blank" class="btn btn-danger btn-lg">完全聽不懂嗎？</a>
+
+    </p>
+</div>
+<div class="row input">
+    <div class="col-md-4">
+        @using (Html.BeginForm("Create", "Craft", FormMethod.Post, new {enctype = "multipart/form-data"}))
+        {
+
+            <div class="form-horizontal">
+                <h4>Resume</h4>
+                <hr/>
+
+                @Html.EditorFor(m => m, new {htmlAttributes = new {@class = "form-control"}})
+
+                <br/>
+                <p>大頭照(尺寸最好為200px*200px)</p>
+                <input type="file" name="fileUpload[0]" class="form-control"/><br/>
+
+                <p>封面照片(尺寸最好為800px*380px)</p>
+                <input type="file" name="fileUpload[1]" class="form-control"/><br/>
+
+                <p>作品集一圖片(尺寸最好為200px*200px)</p>
+                <input type="file" name="fileUpload[2]" class="form-control"/><br/>
+
+                <p>作品集二圖片(尺寸最好為200px*200px)</p>
+                <input type="file" name="fileUpload[3]" class="form-control"/><br/>
+
+                <p>作品集三圖片(尺寸最好為200px*200px)</p>
+                <input type="file" name="fileUpload[4]" class="form-control"/><br/>
+
+                <p>作品集四圖片(尺寸最好為200px*200px)</p>
+                <input type="file" name="fileUpload[5]" class="form-control"/><br/>
+
+                <p>作品集五圖片(尺寸最好為200px*200px)</p>
+                <input type="file" name="fileUpload[6]" class="form-control"/><br/>
+
+                <p>作品集六圖片(尺寸最好為200px*200px)</p>
+                <input type="file" name="fileUpload[7]" class="form-control"/><br/>
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        <input type="submit" value="部署您的履歷 (請耐心等待)" class="btn btn-primary btn-lg"/>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-md-8">
+        <h3>FTP資訊如下圖：</h3>
+        <img src="~/Content/img/p1.png" alt="" class="img-responsive"/>
+
+    </div>
+</div>
